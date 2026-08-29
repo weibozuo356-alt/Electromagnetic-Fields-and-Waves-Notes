@@ -6,31 +6,31 @@
 
 ### 识别信号
 
-“求 \(\mathbf A\) 在 \(\mathbf C\) 方向上的分量”。
+“求 $\mathbf A$ 在 $\mathbf C$ 方向上的分量”。
 
 ### 方法
 
-\[
+$$
 A_C=\mathbf A\cdot\frac{\mathbf C}{|\mathbf C|}.
-\]
+$$
 
-若 \(\mathbf A\) 还需由叉积得到，先算叉积，再投影。最常见错误是直接点乘 \(\mathbf C\)，忘记单位化。
+若 $\mathbf A$ 还需由叉积得到，先算叉积，再投影。最常见错误是直接点乘 $\mathbf C$，忘记单位化。
 
 ## 题型 2：球坐标径向场在直角坐标点的分量
 
 先求
 
-\[
+$$
 r=\sqrt{x^2+y^2+z^2},
 \qquad
 \mathbf e_r=\frac{x\mathbf e_x+y\mathbf e_y+z\mathbf e_z}{r}.
-\]
+$$
 
-然后把 \(\mathbf F=F_r\mathbf e_r\) 展成直角坐标分量。求两矢量夹角统一用
+然后把 $\mathbf F=F_r\mathbf e_r$ 展成直角坐标分量。求两矢量夹角统一用
 
-\[
+$$
 \cos\alpha=\frac{\mathbf A\cdot\mathbf B}{|\mathbf A||\mathbf B|}.
-\]
+$$
 
 ## 题型 3：梯度、散度、旋度基本计算
 
@@ -44,17 +44,17 @@ r=\sqrt{x^2+y^2+z^2},
 
 若题目让你沿两条不同路径积分，先检查
 
-\[
+$$
 \nabla\times\mathbf F=0.
-\]
+$$
 
-在适当区域内，可以求势函数 \(u\)，使 \(\mathbf F=\nabla u\)，于是
+在适当区域内，可以求势函数 $u$，使 $\mathbf F=\nabla u$，于是
 
-\[
+$$
 \int_P^Q\mathbf F\cdot d\mathbf l=u(Q)-u(P).
-\]
+$$
 
-否则按每段路径参数化：写出 \(x(t),y(t),z(t)\)，求 \(dx,dy,dz\)，再代入 \(\mathbf F\cdot d\mathbf l\)。
+否则按每段路径参数化：写出 $x(t),y(t),z(t)$，求 $dx,dy,dz$，再代入 $\mathbf F\cdot d\mathbf l$。
 
 ## 题型 5：闭合曲面通量
 
@@ -75,9 +75,9 @@ r=\sqrt{x^2+y^2+z^2},
 
 先算
 
-\[
+$$
 \nabla\times\mathbf F.
-\]
+$$
 
 若非零，一定不能写成标量梯度；若为零，在适当的单连通区域内可进一步求势函数。
 
@@ -85,9 +85,9 @@ r=\sqrt{x^2+y^2+z^2},
 
 先算
 
-\[
+$$
 \nabla\cdot\mathbf F.
-\]
+$$
 
 若非零，一定不能写成旋度；若为零，在适当区域内存在矢量势。
 
@@ -100,13 +100,13 @@ r=\sqrt{x^2+y^2+z^2},
 1. 对旋度方程再取一次旋度。
 2. 用另一条旋度方程代换。
 3. 使用恒等式
-   \[
+   $$
    \nabla\times(\nabla\times\mathbf A)
    =\nabla(\nabla\cdot\mathbf A)-\nabla^2\mathbf A.
-   \]
+   $$
 4. 用已知散度为零消掉第一项。
 
-做完必须检查常数因子：若两次代换各带 \(1/c\)，最终应出现 \(1/c^2\)。
+做完必须检查常数因子：若两次代换各带 $1/c$，最终应出现 $1/c^2$。
 
 ## 一页式做题检查清单
 
