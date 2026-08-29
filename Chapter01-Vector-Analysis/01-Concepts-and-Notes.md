@@ -233,7 +233,7 @@ $$
 $$
 \rho=\sqrt{x^2+y^2},
 \qquad
-\phi=\operatorname{atan2}(y,x).
+\phi=\text{atan2}(y,x).
 $$
 
 单位矢量关系为
@@ -346,7 +346,7 @@ $$
 梯度定义为
 
 $$
-\operatorname{grad}u=\nabla u
+\text{grad}\,u=\nabla u
 =\mathbf e_x\frac{\partial u}{\partial x}
 +\mathbf e_y\frac{\partial u}{\partial y}
 +\mathbf e_z\frac{\partial u}{\partial z}.
@@ -413,7 +413,7 @@ $$
 \nabla\cdot\mathbf F
 =\lim_{\Delta V\to0}
 \frac{1}{\Delta V}
-\oiint_{\Delta S}\mathbf F\cdot d\mathbf S.
+∯_{\Delta S}\mathbf F\cdot d\mathbf S.
 $$
 
 这正是“把包围一点的小球不断缩小”的严格表达：散度是单位体积的净流出率。
@@ -460,7 +460,7 @@ $$
 ### 定义
 
 $$
-\oiint_S\mathbf F\cdot d\mathbf S
+∯_S\mathbf F\cdot d\mathbf S
 =\iiint_V(\nabla\cdot\mathbf F)\,dV.
 $$
 
@@ -601,7 +601,7 @@ $$
 
 $$
 \iiint_V\left(\nabla u\cdot\nabla v+u\nabla^2v\right)dV
-=\oiint_Su\frac{\partial v}{\partial n}\,dS.
+=∯_Su\frac{\partial v}{\partial n}\,dS.
 $$
 
 其中
@@ -614,7 +614,7 @@ $$
 
 $$
 \iiint_V\left(u\nabla^2v-v\nabla^2u\right)dV
-=\oiint_S\left(u\frac{\partial v}{\partial n}-v\frac{\partial u}{\partial n}\right)dS.
+=∯_S\left(u\frac{\partial v}{\partial n}-v\frac{\partial u}{\partial n}\right)dS.
 $$
 
 ### 理解而非硬背
