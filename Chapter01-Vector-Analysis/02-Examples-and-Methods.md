@@ -25,7 +25,7 @@
 
 #### 方法
 
-对 $\mathbf A=A_x\mathbf e_x+A_y\mathbf e_y+A_z\mathbf e_z$，
+对 $\mathbf A=A_x\mathbf e_x+A_y\mathbf e_y+A_z\mathbf e_z$ ，
 
 $$
 |\mathbf A|=\sqrt{A_x^2+A_y^2+A_z^2},
@@ -43,7 +43,7 @@ $$
 
 #### 例题
 
-设 $\mathbf A=2\mathbf e_x-\mathbf e_y+2\mathbf e_z$。则 $|\mathbf A|=3$，且
+设 $\mathbf A=2\mathbf e_x-\mathbf e_y+2\mathbf e_z$ 。则 $|\mathbf A|=3$ ，且
 
 $$
 \mathbf e_A=\frac23\mathbf e_x-rac13\mathbf e_y+rac23\mathbf e_z.
@@ -85,7 +85,7 @@ $$
 A_C=\frac{1-2}{\sqrt2}=-\frac1{\sqrt2}.
 $$
 
-负号表示投影指向 $-\mathbf C$ 一侧。最常见错误是直接计算 $\mathbf A\cdot\mathbf C$，忘记单位化方向。
+负号表示投影指向 $-\mathbf C$ 一侧。最常见错误是直接计算 $\mathbf A\cdot\mathbf C$ ，忘记单位化方向。
 
 ### 题型 3：叉积、面积与法向量
 
@@ -102,7 +102,7 @@ B_x&B_y&B_z
 \end{vmatrix}.
 $$
 
-平行四边形面积是 $|\mathbf A\times\mathbf B|$，三角形面积是它的一半。单位法向量为
+平行四边形面积是 $|\mathbf A\times\mathbf B|$ ，三角形面积是它的一半。单位法向量为
 
 $$
 \mathbf e_n=\frac{\mathbf A\times\mathbf B}{|\mathbf A\times\mathbf B|}.
@@ -168,7 +168,7 @@ $$
 2. 计算场在该点的分量。
 3. 若要求直角坐标分量，再转换单位矢量。
 
-柱、球坐标的单位矢量会随位置改变，不能把 $\mathbf e_r$ 当成固定的 $\mathbf e_x$。
+柱、球坐标的单位矢量会随位置改变，不能把 $\mathbf e_r$ 当成固定的 $\mathbf e_x$ 。
 
 ### 题型 6：方向导数、梯度与最大变化率
 
@@ -189,11 +189,11 @@ $$
 \frac{\partial u}{\partial l}=\nabla u\cdot\mathbf e_l.
 $$
 
-最大方向导数是 $|\nabla u|$，其方向是 $\nabla u$。
+最大方向导数是 $|\nabla u|$ ，其方向是 $\nabla u$ 。
 
 #### 例题
 
-设 $u=x^2+y^2+z^2$。在点 $(1,-2,2)$ 处，$\nabla u=(2,-4,4)$，所以最大变化率为 6，最快方向为 $(1,-2,2)/3$。
+设 $u=x^2+y^2+z^2$ 。在点 $(1,-2,2)$ 处， $\nabla u=(2,-4,4)$ ，所以最大变化率为 6，最快方向为 $(1,-2,2)/3$ 。
 
 ---
 
@@ -222,7 +222,7 @@ $$
 
 #### 例题
 
-设 $\mathbf F=x^2\mathbf e_x+xy\mathbf e_y+yz\mathbf e_z$，则
+设 $\mathbf F=x^2\mathbf e_x+xy\mathbf e_y+yz\mathbf e_z$ ，则
 
 $$
 \nabla\cdot\mathbf F=2x+x+y=3x+y.
@@ -248,7 +248,7 @@ $$
 
 #### 例题
 
-设 $\mathbf F=(-y,x,0)$，沿单位圆逆时针一周。取 $\mathbf r(t)=(\cos t,\sin t,0)$，则
+设 $\mathbf F=(-y,x,0)$ ，沿单位圆逆时针一周。取 $\mathbf r(t)=(\cos t,\sin t,0)$ ，则
 
 $$
 \oint_C\mathbf F\cdot d\mathbf l=2\pi.
@@ -264,7 +264,7 @@ $$
 \Phi=\iint_S\mathbf F\cdot d\mathbf S.
 $$
 
-若曲面写成 $z=f(x,y)$，向上的有向面积元为
+若曲面写成 $z=f(x,y)$ ，向上的有向面积元为
 
 $$
 d\mathbf S
@@ -274,7 +274,7 @@ $$
 
 #### 例题
 
-设 $\mathbf F=z\mathbf e_z$。它穿过平面 $z=2$ 上单位圆盘、法向向上的通量为 $2\pi$。
+设 $\mathbf F=z\mathbf e_z$ 。它穿过平面 $z=2$ 上单位圆盘、法向向上的通量为 $2\pi$ 。
 
 面积元必须包含方向；法向反向时答案变号。
 
@@ -287,7 +287,7 @@ $$
 =\iiint_V(\nabla\cdot\mathbf F)dV.
 $$
 
-若原曲面 $S_1$ 不闭合，补上简单曲面 $S_2$：
+若原曲面 $S_1$ 不闭合，补上简单曲面 $S_2$ ：
 
 $$
 \Phi_{S_1}=\Phi_{S_1+S_2}-\Phi_{S_2}.
@@ -295,7 +295,7 @@ $$
 
 #### 例题
 
-设 $\mathbf F=(x,y,z)$。半径为 $a$ 的球面外向通量为
+设 $\mathbf F=(x,y,z)$ 。半径为 $a$ 的球面外向通量为
 
 $$
 \Phi=3\cdot\frac43\pi a^3=4\pi a^3.
@@ -314,7 +314,7 @@ $$
 
 #### 例题
 
-设 $\mathbf F=(-y/2,x/2,0)$，$C$ 是 $xy$ 平面内单位圆的逆时针边界。因为 $\nabla\times\mathbf F=\mathbf e_z$，取单位圆盘为 $S$，得到
+设 $\mathbf F=(-y/2,x/2,0)$ ， $C$ 是 $xy$ 平面内单位圆的逆时针边界。因为 $\nabla\times\mathbf F=\mathbf e_z$ ，取单位圆盘为 $S$ ，得到
 
 $$
 \oint_C\mathbf F\cdot d\mathbf l=\pi.
@@ -349,7 +349,7 @@ $$
 
 ### 题型 13：由矢量场反求标量势函数
 
-若 $\mathbf F=(P,Q,R)=\nabla u$，则
+若 $\mathbf F=(P,Q,R)=\nabla u$ ，则
 
 $$
 \frac{\partial u}{\partial x}=P,
@@ -361,16 +361,16 @@ $$
 
 #### 逐分量积分法
 
-1. 对 $P$ 关于 $x$ 积分，保留未知函数 $g(y,z)$。
+1. 对 $P$ 关于 $x$ 积分，保留未知函数 $g(y,z)$ 。
 2. 与 $Q$ 比较，求 $g$ 对 $y$ 的依赖。
 3. 再与 $R$ 比较，求剩余函数。
 4. 最后加任意常数。
 
-例如 $\mathbf F=(2x,2y,2z)$ 的势函数为 $u=x^2+y^2+z^2+C$。
+例如 $\mathbf F=(2x,2y,2z)$ 的势函数为 $u=x^2+y^2+z^2+C$ 。
 
 ### 题型 14：判断能否表示为旋度
 
-若 $\mathbf F=\nabla\times\mathbf A$，则必有
+若 $\mathbf F=\nabla\times\mathbf A$ ，则必有
 
 $$
 \nabla\cdot\mathbf F=0.
@@ -391,13 +391,13 @@ $$
 
 #### 例题
 
-对 $\mathbf F=(ax,by,cz)$，
+对 $\mathbf F=(ax,by,cz)$ ，
 
 $$
 \nabla\cdot\mathbf F=a+b+c.
 $$
 
-即使 $a+b+c=0$，也只能说明场无散，不能说明场本身为零。
+即使 $a+b+c=0$ ，也只能说明场无散，不能说明场本身为零。
 
 ---
 
@@ -409,7 +409,7 @@ $$
 - 轴对称问题常用柱坐标。
 - 球对称问题常用球坐标。
 
-若场为纯径向球对称场 $\mathbf F=F_r(r)\mathbf e_r$，散度可直接简化为
+若场为纯径向球对称场 $\mathbf F=F_r(r)\mathbf e_r$ ，散度可直接简化为
 
 $$
 \nabla\cdot\mathbf F
@@ -443,12 +443,12 @@ $$
 +\frac{\partial^2u}{\partial z^2}.
 $$
 
-- $\nabla^2u=0$：拉普拉斯方程，$u$ 为调和函数。
-- $\nabla^2u=f$：泊松型方程。
+- $\nabla^2u=0$ ：拉普拉斯方程， $u$ 为调和函数。
+- $\nabla^2u=f$ ：泊松型方程。
 
 #### 例题
 
-对 $u=x^2-y^2+3z$，有 $\nabla^2u=2-2+0=0$，所以它是调和函数。
+对 $u=x^2-y^2+3z$ ，有 $\nabla^2u=2-2+0=0$ ，所以它是调和函数。
 
 进阶题可能给出含参数函数，要求选择参数使拉普拉斯恒为零。此时求出 $\nabla^2u$ 后比较各项系数。
 
@@ -497,7 +497,7 @@ $$
 =\nabla(\nabla\cdot\mathbf A)-\nabla^2\mathbf A.
 $$
 
-若两次代换各带一个 $1/c$，最终系数必须是 $1/c^2$。这一检查可以发现教材 1-19 中的排版错误。
+若两次代换各带一个 $1/c$ ，最终系数必须是 $1/c^2$ 。这一检查可以发现教材 1-19 中的排版错误。
 
 ---
 
