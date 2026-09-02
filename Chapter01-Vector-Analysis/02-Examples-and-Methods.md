@@ -46,7 +46,7 @@ $$
 设 $\mathbf A=2\mathbf e_x-\mathbf e_y+2\mathbf e_z$ 。则 $|\mathbf A|=3$ ，且
 
 $$
-\mathbf e_A=\frac23\mathbf e_x-rac13\mathbf e_y+rac23\mathbf e_z.
+\mathbf e_A=\frac23\mathbf e_x-\frac13\mathbf e_y+\frac23\mathbf e_z.
 $$
 
 #### 易错点
