@@ -96,13 +96,16 @@ $$
 
 它的核心不是“源点处真的出现一个普通的无穷大数”，而是挑选性质：
 
+若积分区域包含点电荷，即 $\mathbf r_0\in V$，则
+
 $$
-\iiint_V \delta^{(3)}(\mathbf r'-\mathbf r_0)dV'
-=
-\begin{cases}
-1,&\mathbf r_0\in V,\\
-0,&\mathbf r_0\notin V.
-\end{cases}
+\iiint_V \delta^{(3)}(\mathbf r'-\mathbf r_0)dV'=1.
+$$
+
+若积分区域不包含点电荷，即 $\mathbf r_0\notin V$，则
+
+$$
+\iiint_V \delta^{(3)}(\mathbf r'-\mathbf r_0)dV'=0.
 $$
 
 因此
@@ -402,7 +405,7 @@ $$
 所以 $\arctan$ 与 $z-z'=\rho\cot\theta$ 并不矛盾，它们是同一组直角三角形关系的两种写法。严格处理象限时，应写
 
 $$
-\theta=\operatorname{atan2}(\rho,z-z'),
+\theta=\mathrm{atan2}(\rho,z-z'),
 $$
 
 而不是只用值域有限的普通 $\arctan$；当源点高于场点时，$z-z'<0$，此时 $\theta$ 应落在第二象限。
@@ -744,7 +747,7 @@ $$
 5. 混淆 $\rho$ 的两种含义：体电荷密度与柱坐标径向距离。
 6. 把 $\mathrm{C/m^3}$ 写成电流密度单位；电流密度是 $\mathrm{A/m^2}$。
 7. 直线段换元时漏掉 $dz'=\rho\csc^2\theta\,d\theta$，或没有同步更换积分上下限。
-8. 用普通 $\arctan$ 忽略象限，导致上端角 $\theta_2$ 取错；应依据几何或使用 $\operatorname{atan2}$。
+8. 用普通 $\arctan$ 忽略象限，导致上端角 $\theta_2$ 取错；应依据几何或使用 $\mathrm{atan2}$。
 9. 圆环题直接积分场强大小，忘记只有轴向分量同向叠加。
 
 ## 12. 考前自测清单
