@@ -125,7 +125,7 @@ $$
 $$
 \vec E
 =\frac{p}{4\pi\varepsilon_0r^3}
-\left(2\cos\theta\,\vec e_r+\sin\theta\,\vec e_\theta\right).
+\left(2\cos\theta \vec e_r+\sin\theta \vec e_\theta\right).
 $$
 
 ### 两个特殊方向
@@ -361,8 +361,8 @@ $$
 |---|---|---|
 | 单个线性电容器，已知 $q,U,C$ | $W_e=qU/2=CU^2/2=q^2/(2C)$ | 不需要空间积分 |
 | 已知各导体的 $q_i,\varphi_i$ | $W_e=\sum_iq_i\varphi_i/2$ | 对导体求和 |
-| 已知电荷密度与电位 | $W_e=\iiint\rho\varphi\,dV/2$ | 有电荷的区域 |
-| 已知 $\vec E,\vec D$ | $W_e=\iiint\vec E\cdot\vec D\,dV/2$ | 电场存在的整个空间 |
+| 已知电荷密度与电位 | $W_e=\iiint\rho\varphi dV/2$ | 有电荷的区域 |
+| 已知 $\vec E,\vec D$ | $W_e=\iiint\vec E\cdot\vec D dV/2$ | 电场存在的整个空间 |
 
 ### 为什么电容器能量有三种写法
 
@@ -429,7 +429,7 @@ $$
 真空中 $\vec D=\varepsilon_0\vec E$ ，故
 
 $$
-W_e=\frac{\varepsilon_0}{2}\iiint E^2\,dV.
+W_e=\frac{\varepsilon_0}{2}\iiint E^2 dV.
 $$
 
 电荷虽然只存在于 $r<a$ ，但球外仍有电场，因此球外也储存能量。球对称薄壳体积元为

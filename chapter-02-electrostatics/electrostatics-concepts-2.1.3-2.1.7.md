@@ -28,10 +28,10 @@
 $$
 \oint_S \vec E\cdot d\vec S
 =\frac{Q_{\mathrm{enc}}}{\varepsilon_0}
-=\frac{1}{\varepsilon_0}\iiint_V\rho\,dV.
+=\frac{1}{\varepsilon_0}\iiint_V\rho dV.
 $$
 
-- $S$ 必须是闭合曲面， $d\vec S=\vec n\,dS$ 指向闭合面的外侧。
+- $S$ 必须是闭合曲面， $d\vec S=\vec n dS$ 指向闭合面的外侧。
 - $Q_{\mathrm{enc}}$ 只统计闭合面内部的电荷。
 - 面外电荷会影响 $S$ 上各点的 $\vec E$ ，但它对整个闭合面的净通量为零。
 
@@ -186,7 +186,7 @@ $$
 $$
 \vec E
 =\frac{p}{4\pi\varepsilon_0r^3}
-\left(2\cos\theta\,\vec e_r+\sin\theta\,\vec e_\theta\right).
+\left(2\cos\theta \vec e_r+\sin\theta \vec e_\theta\right).
 $$
 
 与点电荷的 $E\propto1/r^2$ 不同，偶极子总电荷为零，远区的最低阶非零项衰减更快： $E\propto1/r^3$ 。
@@ -258,8 +258,8 @@ $$
 
 $$
 q_p
-=-\iiint_V\nabla\cdot\vec P\,dV
-=\iiint_V\rho_p\,dV.
+=-\iiint_V\nabla\cdot\vec P dV
+=\iiint_V\rho_p dV.
 $$
 
 因为体积 $V$ 任意，所以
@@ -339,7 +339,7 @@ $$
 \rho_s=\vec D\cdot\vec n=\varepsilon\vec E\cdot\vec n.
 $$
 
-5. 计算 $q=\iint_S\rho_s\,dS$ ，再求 $C=q/U$ 。
+5. 计算 $q=\iint_S\rho_s dS$ ，再求 $C=q/U$ 。
 
 第二条路线更适合已知电位边界、形状复杂而电荷分布未知的问题。
 
@@ -417,16 +417,16 @@ $$
 
 带电系统从零电荷缓慢建立到最终状态时，外源必须克服电荷间相互作用做功。若过程足够缓慢、没有能量辐射，外源所做的功全部转化为静电场能量。
 
-设最终电荷和电位为 $q$ 、 $\varphi$ 。在线性系统中，充电到比例 $\alpha$ 时，电荷和电位同时变为 $\alpha q$ 、 $\alpha\varphi$ 。再增加电荷 $q\,d\alpha$ ，外源做功
+设最终电荷和电位为 $q$ 、 $\varphi$ 。在线性系统中，充电到比例 $\alpha$ 时，电荷和电位同时变为 $\alpha q$ 、 $\alpha\varphi$ 。再增加电荷 $q d\alpha$ ，外源做功
 
 $$
-dW_e=(\alpha\varphi)(q\,d\alpha).
+dW_e=(\alpha\varphi)(q d\alpha).
 $$
 
 积分得到
 
 $$
-W_e=\int_0^1\alpha q\varphi\,d\alpha
+W_e=\int_0^1\alpha q\varphi d\alpha
 =\frac12q\varphi.
 $$
 
@@ -456,15 +456,15 @@ W_e=\frac12\sum_i q_i\varphi_i,
 $$
 
 $$
-W_e=\frac12\int_L\rho_l\varphi\,dl,
+W_e=\frac12\int_L\rho_l\varphi dl,
 $$
 
 $$
-W_e=\frac12\iint_S\rho_s\varphi\,dS,
+W_e=\frac12\iint_S\rho_s\varphi dS,
 $$
 
 $$
-W_e=\frac12\iiint_V\rho\varphi\,dV.
+W_e=\frac12\iiint_V\rho\varphi dV.
 $$
 
 对点电荷求和时， $\varphi_i$ 应理解为其他电荷在第 $i$ 个电荷处产生的电位，不能把理想点电荷的无限自电位算进去。
@@ -474,7 +474,7 @@ $$
 对于线性介质，
 
 $$
-W_e=\frac12\iiint_V\vec E\cdot\vec D\,dV,
+W_e=\frac12\iiint_V\vec E\cdot\vec D dV,
 $$
 
 因此能量密度为
@@ -498,7 +498,7 @@ $$
 从
 
 $$
-W_e=\frac12\iiint_V\rho\varphi\,dV
+W_e=\frac12\iiint_V\rho\varphi dV
 $$
 
 出发，代入 $\rho=\nabla\cdot\vec D$ ，再用恒等式
@@ -514,15 +514,15 @@ $$
 $$
 W_e
 =\frac12\oint_S\varphi\vec D\cdot d\vec S
-+\frac12\iiint_V\vec E\cdot\vec D\,dV.
++\frac12\iiint_V\vec E\cdot\vec D dV.
 $$
 
 若电荷局限在有限区域，并把 $S$ 扩大到无穷远，表面积分趋于零，便得到场能量公式。
 
 ### 7.5 两种能量公式的积分区域不同
 
-- $\frac12\iiint\rho\varphi\,dV$ ：只在有电荷的区域有贡献。
-- $\frac12\iiint\vec E\cdot\vec D\,dV$ ：要覆盖电场存在的整个空间。
+- $\frac12\iiint\rho\varphi dV$ ：只在有电荷的区域有贡献。
+- $\frac12\iiint\vec E\cdot\vec D dV$ ：要覆盖电场存在的整个空间。
 
 这正是均匀带电球例题中，电荷—电位法只积分 $0\le r\le a$ ，而场能量法必须同时积分球内和球外的原因。
 

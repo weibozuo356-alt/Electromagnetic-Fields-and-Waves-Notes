@@ -91,7 +91,7 @@ $$
 若点电荷 $q$ 位于 $\vec r_0$，用三维 Dirac $\delta$ 函数可写成
 
 $$
-\boxed{\rho(\vec r')=q\,\delta^{(3)}(\vec r'-\vec r_0)}.
+\boxed{\rho(\vec r')=q \delta^{(3)}(\vec r'-\vec r_0)}.
 $$
 
 它的核心不是“源点处真的出现一个普通的无穷大数”，而是挑选性质：
@@ -267,7 +267,7 @@ $$
 \boxed{
 d\vec E
 =\frac{1}{4\pi\varepsilon_0}
-\frac{\vec R}{R^3}\,dq
+\frac{\vec R}{R^3} dq
 }.
 $$
 
@@ -415,7 +415,7 @@ $$
 线元电荷为
 
 $$
-dq=\rho_l\,dz'.
+dq=\rho_l dz'.
 $$
 
 代入母式：
@@ -433,13 +433,13 @@ $$
 $$
 dE_\rho
 =\frac{\rho_l}{4\pi\varepsilon_0}
-\frac{\rho\,dz'}{\left[\rho^2+(z-z')^2\right]^{3/2}},
+\frac{\rho dz'}{\left[\rho^2+(z-z')^2\right]^{3/2}},
 $$
 
 $$
 dE_z
 =\frac{\rho_l}{4\pi\varepsilon_0}
-\frac{(z-z')\,dz'}{\left[\rho^2+(z-z')^2\right]^{3/2}}.
+\frac{(z-z') dz'}{\left[\rho^2+(z-z')^2\right]^{3/2}}.
 $$
 
 ### 7.4 为什么可以由 $z'$ 换成 $\theta$
@@ -453,13 +453,13 @@ $$
 对两边微分：
 
 $$
--dz'=-\rho\csc^2\theta\,d\theta,
+-dz'=-\rho\csc^2\theta d\theta,
 $$
 
 所以
 
 $$
-\boxed{dz'=\rho\csc^2\theta\,d\theta}.
+\boxed{dz'=\rho\csc^2\theta d\theta}.
 $$
 
 同时
@@ -472,26 +472,26 @@ $$
 
 $$
 dE
-=\frac{1}{4\pi\varepsilon_0}\frac{\rho_l\,dz'}{R^2}
-=\frac{\rho_l}{4\pi\varepsilon_0\rho}\,d\theta.
+=\frac{1}{4\pi\varepsilon_0}\frac{\rho_l dz'}{R^2}
+=\frac{\rho_l}{4\pi\varepsilon_0\rho} d\theta.
 $$
 
 又因为
 
 $$
-\vec e_R=\sin\theta\,\vec e_\rho+\cos\theta\,\vec e_z,
+\vec e_R=\sin\theta \vec e_\rho+\cos\theta \vec e_z,
 $$
 
 所以
 
 $$
 dE_\rho
-=\frac{\rho_l}{4\pi\varepsilon_0\rho}\sin\theta\,d\theta,
+=\frac{\rho_l}{4\pi\varepsilon_0\rho}\sin\theta d\theta,
 $$
 
 $$
 dE_z
-=\frac{\rho_l}{4\pi\varepsilon_0\rho}\cos\theta\,d\theta.
+=\frac{\rho_l}{4\pi\varepsilon_0\rho}\cos\theta d\theta.
 $$
 
 换元成立的本质是：$z'$ 在 $[z_1,z_2]$ 上连续移动时，$\theta$ 与它一一对应且单调变化，因此可以用角度重新标记同一批源点。
@@ -504,7 +504,7 @@ $$
 \begin{aligned}
 E_\rho
 &=\frac{\rho_l}{4\pi\varepsilon_0\rho}
-\int_{\theta_1}^{\theta_2}\sin\theta\,d\theta\\
+\int_{\theta_1}^{\theta_2}\sin\theta d\theta\\
 &=\frac{\rho_l}{4\pi\varepsilon_0\rho}
 \left[-\cos\theta\right]_{\theta_1}^{\theta_2}\\
 &=\boxed{
@@ -520,7 +520,7 @@ $$
 \begin{aligned}
 E_z
 &=\frac{\rho_l}{4\pi\varepsilon_0\rho}
-\int_{\theta_1}^{\theta_2}\cos\theta\,d\theta\\
+\int_{\theta_1}^{\theta_2}\cos\theta d\theta\\
 &=\frac{\rho_l}{4\pi\varepsilon_0\rho}
 \left[\sin\theta\right]_{\theta_1}^{\theta_2}\\
 &=\boxed{
@@ -619,9 +619,9 @@ $$
 用源点方位角 $\varphi'$ 参数化圆环：
 
 $$
-dl'=a\,d\varphi',
+dl'=a d\varphi',
 \qquad
-dq=\rho_l dl'=\rho_l a\,d\varphi'.
+dq=\rho_l dl'=\rho_l a d\varphi'.
 $$
 
 源点位置可写成
@@ -657,13 +657,13 @@ $$
 d\vec E
 =\frac{1}{4\pi\varepsilon_0}
 \frac{z\vec e_z-a\vec e_\rho'}{(a^2+z^2)^{3/2}}
-\rho_l a\,d\varphi'.
+\rho_l a d\varphi'.
 $$
 
 横向部分的积分为
 
 $$
-\int_0^{2\pi}\vec e_\rho'\,d\varphi'=0,
+\int_0^{2\pi}\vec e_\rho' d\varphi'=0,
 $$
 
 这就是“横向分量抵消”的数学表达。轴向微元为
@@ -672,7 +672,7 @@ $$
 dE_z
 =\frac{1}{4\pi\varepsilon_0}
 \frac{z}{(a^2+z^2)^{3/2}}
-\rho_l a\,d\varphi'.
+\rho_l a d\varphi'.
 $$
 
 积分得
@@ -700,7 +700,7 @@ $$
 圆环总电荷为
 
 $$
-Q=\int_0^{2\pi}\rho_l a\,d\varphi'=2\pi a\rho_l.
+Q=\int_0^{2\pi}\rho_l a d\varphi'=2\pi a\rho_l.
 $$
 
 代入可得用总电荷表示的形式：
@@ -746,7 +746,7 @@ $$
 4. 多个电场只加大小，不加矢量分量。
 5. 混淆 $\rho$ 的两种含义：体电荷密度与柱坐标径向距离。
 6. 把 $\mathrm{C/m^3}$ 写成电流密度单位；电流密度是 $\mathrm{A/m^2}$。
-7. 直线段换元时漏掉 $dz'=\rho\csc^2\theta\,d\theta$，或没有同步更换积分上下限。
+7. 直线段换元时漏掉 $dz'=\rho\csc^2\theta d\theta$，或没有同步更换积分上下限。
 8. 用普通 $\arctan$ 忽略象限，导致上端角 $\theta_2$ 取错；应依据几何或使用 $\mathrm{atan2}$。
 9. 圆环题直接积分场强大小，忘记只有轴向分量同向叠加。
 
