@@ -539,7 +539,7 @@ $$
 | 从电位求场 | $\vec E=-\nabla\varphi$ | 坐标系中的梯度公式 |
 | 偶极子远区场 | $\vec E\propto1/r^3$ | 是否满足 $r\gg l$ |
 | 极化体电荷 | $\rho_p=-\nabla\cdot\vec P$ | $\vec P$ 是否随位置变化 |
-| 极化面电荷 | $\rho_{sp}=\vec P\cdot\vec n$ | $\vec n$ 是否取介质外法向 |
+| 极化面电荷 | $\rho_{ps}=\vec P\cdot\vec n$ | $\vec n$ 是否取介质外法向 |
 | 双导体电容 | $C=q/U$ | 是先求电荷还是先求电位 |
 | 电容器能量 | $W_e=qU/2=CU^2/2=q^2/(2C)$ | 控制量是 $q$ 还是 $U$ |
 | 场能量密度 | $w_e=\vec E\cdot\vec D/2$ | 介质是否线性 |
