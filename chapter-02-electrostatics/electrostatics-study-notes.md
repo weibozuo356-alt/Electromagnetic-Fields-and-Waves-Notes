@@ -23,7 +23,7 @@
 电磁场模型中的物理量可分为两类：
 
 - **源量**描述“是谁产生场”：本章的源是电荷；以后研究磁场时，电流是重要的源。
-- **场量**描述“源在空间中造成了什么”：电荷产生电场，电场强度用 $\mathbf E$ 表示；电流与磁场之间也有对应关系。
+- **场量**描述“源在空间中造成了什么”：电荷产生电场，电场强度用 $\vec E$ 表示；电流与磁场之间也有对应关系。
 
 因此本章不是孤立地记公式，而是在建立
 
@@ -36,7 +36,7 @@ $$
 ### 考试重点
 
 - 电荷是电场的源，电流是磁场的源。
-- 电荷密度是源量，电场强度 $\mathbf E$ 是场量，二者不要混为一类。
+- 电荷密度是源量，电场强度 $\vec E$ 是场量，二者不要混为一类。
 
 ## 2. 电荷及其分布
 
@@ -64,9 +64,9 @@ $$
 
 | 分布 | 密度定义 | 微元电荷 | 总电荷 | 单位 |
 |---|---|---|---|---|
-| 体分布 | $\rho(\mathbf r')=dq/dV'$ | $dq=\rho(\mathbf r')dV'$ | $Q=\iiint_V\rho(\mathbf r')dV'$ | $\mathrm{C/m^3}$ |
-| 面分布 | $\rho_s(\mathbf r')=dq/dS'$ | $dq=\rho_s(\mathbf r')dS'$ | $Q=\iint_S\rho_s(\mathbf r')dS'$ | $\mathrm{C/m^2}$ |
-| 线分布 | $\rho_l(\mathbf r')=dq/dl'$ | $dq=\rho_l(\mathbf r')dl'$ | $Q=\int_L\rho_l(\mathbf r')dl'$ | $\mathrm{C/m}$ |
+| 体分布 | $\rho(\vec r')=dq/dV'$ | $dq=\rho(\vec r')dV'$ | $Q=\iiint_V\rho(\vec r')dV'$ | $\mathrm{C/m^3}$ |
+| 面分布 | $\rho_s(\vec r')=dq/dS'$ | $dq=\rho_s(\vec r')dS'$ | $Q=\iint_S\rho_s(\vec r')dS'$ | $\mathrm{C/m^2}$ |
+| 线分布 | $\rho_l(\vec r')=dq/dl'$ | $dq=\rho_l(\vec r')dl'$ | $Q=\int_L\rho_l(\vec r')dl'$ | $\mathrm{C/m}$ |
 
 ![体电荷分布示意图](images/volume-charge-distribution.png)
 
@@ -82,36 +82,36 @@ $$
 
 如何选模型取决于观察尺度：距离远大于带电体的三个尺度时可近似为点；只忽略厚度时可近似为面；忽略横截面而保留长度时可近似为线。
 
-> **易错点：**$\rho$ 既常表示体电荷密度，也常作为柱坐标的径向距离。必须依靠上下文判断。本文在直线段例题中，$\rho$ 表示场点到带电直线的垂直距离；体电荷密度会明确写成 $\rho(\mathbf r')$。
+> **易错点：**$\rho$ 既常表示体电荷密度，也常作为柱坐标的径向距离。必须依靠上下文判断。本文在直线段例题中，$\rho$ 表示场点到带电直线的垂直距离；体电荷密度会明确写成 $\rho(\vec r')$。
 
 ### 2.3 点电荷与 Dirac $\delta$ 函数
 
 当带电区域的尺度远小于场点到它的距离时，可把总电荷集中在一个几何点上，形成点电荷模型。
 
-若点电荷 $q$ 位于 $\mathbf r_0$，用三维 Dirac $\delta$ 函数可写成
+若点电荷 $q$ 位于 $\vec r_0$，用三维 Dirac $\delta$ 函数可写成
 
 $$
-\boxed{\rho(\mathbf r')=q\,\delta^{(3)}(\mathbf r'-\mathbf r_0)}.
+\boxed{\rho(\vec r')=q\,\delta^{(3)}(\vec r'-\vec r_0)}.
 $$
 
 它的核心不是“源点处真的出现一个普通的无穷大数”，而是挑选性质：
 
-若积分区域包含点电荷，即 $\mathbf r_0\in V$，则
+若积分区域包含点电荷，即 $\vec r_0\in V$，则
 
 $$
-\iiint_V \delta^{(3)}(\mathbf r'-\mathbf r_0)dV'=1.
+\iiint_V \delta^{(3)}(\vec r'-\vec r_0)dV'=1.
 $$
 
-若积分区域不包含点电荷，即 $\mathbf r_0\notin V$，则
+若积分区域不包含点电荷，即 $\vec r_0\notin V$，则
 
 $$
-\iiint_V \delta^{(3)}(\mathbf r'-\mathbf r_0)dV'=0.
+\iiint_V \delta^{(3)}(\vec r'-\vec r_0)dV'=0.
 $$
 
 因此
 
 $$
-\iiint_V\rho(\mathbf r')dV'=q
+\iiint_V\rho(\vec r')dV'=q
 $$
 
 恰好恢复点电荷的总电荷量。
@@ -124,7 +124,7 @@ $$
 | 体电荷密度 | $\rho$ | $\mathrm{C/m^3}$ | 单位体积的电荷量 |
 | 面电荷密度 | $\rho_s$ | $\mathrm{C/m^2}$ | 单位面积的电荷量 |
 | 线电荷密度 | $\rho_l$ | $\mathrm{C/m}$ | 单位长度的电荷量 |
-| 电流密度 | $\mathbf J$ | $\mathrm{A/m^2}$ | 单位面积通过的电流，后续章节学习 |
+| 电流密度 | $\vec J$ | $\mathrm{A/m^2}$ | 单位面积通过的电流，后续章节学习 |
 
 > **考试重点：**$\mathrm{C/m^3}$ 是体电荷密度，不是电流密度；$\mathrm{A/m^2}$ 才是电流密度的单位。
 
@@ -135,20 +135,20 @@ $$
 按照教材图 2-10 的记号，$q_2$ 位于 $S$ 点，$q_1$ 位于 $P$ 点：
 
 $$
-\mathbf R_{12}=\mathbf r_1-\mathbf r_2,
-\qquad R_{12}=|\mathbf R_{12}|,
-\qquad \mathbf e_{12}=\frac{\mathbf R_{12}}{R_{12}}.
+\vec R_{12}=\vec r_1-\vec r_2,
+\qquad R_{12}=|\vec R_{12}|,
+\qquad \vec e_{12}=\frac{\vec R_{12}}{R_{12}}.
 $$
 
 真空中 $q_2$ 对 $q_1$ 的作用力为
 
 $$
 \boxed{
-\mathbf F_{12}
+\vec F_{12}
 =\frac{1}{4\pi\varepsilon_0}
-\frac{q_1q_2}{R_{12}^2}\mathbf e_{12}
+\frac{q_1q_2}{R_{12}^2}\vec e_{12}
 =\frac{1}{4\pi\varepsilon_0}
-\frac{q_1q_2\mathbf R_{12}}{R_{12}^3}
+\frac{q_1q_2\vec R_{12}}{R_{12}^3}
 }.
 $$
 
@@ -161,16 +161,16 @@ $$
 把公式拆开看最清楚：
 
 - $R_{12}^{-2}$ 决定力的大小随距离平方衰减。
-- $\mathbf e_{12}$ 是单位方向矢量，指出从源电荷 $q_2$ 指向受力电荷 $q_1$ 的方向。
-- 合并后写成 $\mathbf R_{12}/R_{12}^3$，其中分子同时携带方向和一个长度，整体仍然按 $1/R_{12}^2$ 衰减。
-- $q_1q_2>0$ 时力沿 $\mathbf R_{12}$，表现为排斥；$q_1q_2<0$ 时方向自动反转，表现为吸引。
+- $\vec e_{12}$ 是单位方向矢量，指出从源电荷 $q_2$ 指向受力电荷 $q_1$ 的方向。
+- 合并后写成 $\vec R_{12}/R_{12}^3$，其中分子同时携带方向和一个长度，整体仍然按 $1/R_{12}^2$ 衰减。
+- $q_1q_2>0$ 时力沿 $\vec R_{12}$，表现为排斥；$q_1q_2<0$ 时方向自动反转，表现为吸引。
 
 ### 3.3 叠加原理
 
 若有 $N$ 个源电荷共同作用于电荷 $q$，总力是各个库仑力的矢量和：
 
 $$
-\boxed{\mathbf F=\sum_{i=1}^{N}\mathbf F_i}.
+\boxed{\vec F=\sum_{i=1}^{N}\vec F_i}.
 $$
 
 叠加的是**矢量**，不能只把力的大小相加；必须在同一坐标系中分解分量后相加。
@@ -179,60 +179,60 @@ $$
 
 ### 4.1 定义和物理意义
 
-在某点放置一个足够小的正试验电荷 $q_0$，若其受到电场力 $\mathbf F$，则该点的电场强度定义为
+在某点放置一个足够小的正试验电荷 $q_0$，若其受到电场力 $\vec F$，则该点的电场强度定义为
 
 $$
 \boxed{
-\mathbf E(\mathbf r)
-=\lim_{q_0\to0}\frac{\mathbf F}{q_0}
+\vec E(\vec r)
+=\lim_{q_0\to0}\frac{\vec F}{q_0}
 }.
 $$
 
 课堂常简写为
 
 $$
-\mathbf E=\frac{\mathbf F}{q}.
+\vec E=\frac{\vec F}{q}.
 $$
 
-严格说，分母应理解为正试验电荷，且它足够小，不会明显改变原有电荷分布。$\mathbf E$ 描述电场本身，不依赖用来探测它的试验电荷。
+严格说，分母应理解为正试验电荷，且它足够小，不会明显改变原有电荷分布。$\vec E$ 描述电场本身，不依赖用来探测它的试验电荷。
 
 电场强度的方向定义为**正**试验电荷的受力方向，单位为
 
 $$
-[\mathbf E]=\mathrm{N/C}=\mathrm{V/m}.
+[\vec E]=\mathrm{N/C}=\mathrm{V/m}.
 $$
 
 因为 $1\ \mathrm V=1\ \mathrm{J/C}$ 且 $1\ \mathrm N=1\ \mathrm{J/m}$，所以两个单位等价。
 
 ### 4.2 点电荷产生的电场
 
-点电荷 $q$ 位于源点 $\mathbf r'$，场点位于 $\mathbf r$，则
+点电荷 $q$ 位于源点 $\vec r'$，场点位于 $\vec r$，则
 
 $$
 \boxed{
-\mathbf E(\mathbf r)
+\vec E(\vec r)
 =\frac{1}{4\pi\varepsilon_0}
-\frac{q(\mathbf r-\mathbf r')}{|\mathbf r-\mathbf r'|^3}
+\frac{q(\vec r-\vec r')}{|\vec r-\vec r'|^3}
 }.
 $$
 
-若源点在原点，则 $\mathbf r'=0$，退化为
+若源点在原点，则 $\vec r'=0$，退化为
 
 $$
-\mathbf E(\mathbf r)
-=\frac{q}{4\pi\varepsilon_0r^2}\mathbf e_r.
+\vec E(\vec r)
+=\frac{q}{4\pi\varepsilon_0r^2}\vec e_r.
 $$
 
 ### 4.3 多个点电荷的电场
 
-源电荷 $q_i$ 位于 $\mathbf r_i'$ 时，场点 $\mathbf r$ 处的总场为
+源电荷 $q_i$ 位于 $\vec r_i'$ 时，场点 $\vec r$ 处的总场为
 
 $$
 \boxed{
-\mathbf E(\mathbf r)
+\vec E(\vec r)
 =\sum_{i=1}^{N}
 \frac{1}{4\pi\varepsilon_0}
-\frac{q_i(\mathbf r-\mathbf r_i')}{|\mathbf r-\mathbf r_i'|^3}
+\frac{q_i(\vec r-\vec r_i')}{|\vec r-\vec r_i'|^3}
 }.
 $$
 
@@ -244,18 +244,18 @@ $$
 
 ![源点、场点和距离矢量](images/source-field-distance-vector.png)
 
-*图 5　源点由 $\mathbf r'$ 定位，场点 $M$ 由 $\mathbf r$ 定位，从源点指向场点的距离矢量是 $\mathbf R=\mathbf r-\mathbf r'$。图源：课堂 PPT 第 13 页。*
+*图 5　源点由 $\vec r'$ 定位，场点 $M$ 由 $\vec r$ 定位，从源点指向场点的距离矢量是 $\vec R=\vec r-\vec r'$。图源：课堂 PPT 第 13 页。*
 
 | 记号 | 含义 | 积分时是否变化 |
 |---|---|---|
-| $\mathbf r'$ | 源点的位置矢量 | 变化，是积分变量 |
-| $\mathbf r$ | 要计算电场的场点位置矢量 | 固定，是结果的自变量 |
-| $\mathbf R=\mathbf r-\mathbf r'$ | 从源点指向场点的距离矢量 | 随源点变化 |
-| $R=|\mathbf R|$ | 源点与场点间的距离 | 随源点变化 |
+| $\vec r'$ | 源点的位置矢量 | 变化，是积分变量 |
+| $\vec r$ | 要计算电场的场点位置矢量 | 固定，是结果的自变量 |
+| $\vec R=\vec r-\vec r'$ | 从源点指向场点的距离矢量 | 随源点变化 |
+| $R=|\vec R|$ | 源点与场点间的距离 | 随源点变化 |
 
-为什么积分变量带撇？因为计算某一个场点 $\mathbf r$ 的电场时，要让源点在整个带电区域内“走一遍”。带撇号的 $x',y',z',l',S',V'$ 都属于源；不带撇号的 $x,y,z$ 属于已经固定的场点。
+为什么积分变量带撇？因为计算某一个场点 $\vec r$ 的电场时，要让源点在整个带电区域内“走一遍”。带撇号的 $x',y',z',l',S',V'$ 都属于源；不带撇号的 $x,y,z$ 属于已经固定的场点。
 
-> **方向检查：**$\mathbf R$ 必须是“场点减源点”。若误写成 $\mathbf r'-\mathbf r$，电场方向会整体反向。
+> **方向检查：**$\vec R$ 必须是“场点减源点”。若误写成 $\vec r'-\vec r$，电场方向会整体反向。
 
 ## 6. 连续分布电荷产生的电场
 
@@ -265,16 +265,16 @@ $$
 
 $$
 \boxed{
-d\mathbf E
+d\vec E
 =\frac{1}{4\pi\varepsilon_0}
-\frac{\mathbf R}{R^3}\,dq
+\frac{\vec R}{R^3}\,dq
 }.
 $$
 
-再利用叠加原理，把所有 $d\mathbf E$ 积分起来：
+再利用叠加原理，把所有 $d\vec E$ 积分起来：
 
 $$
-\mathbf E=\int d\mathbf E.
+\vec E=\int d\vec E.
 $$
 
 ### 6.2 三种分布只是 $dq$ 的写法不同
@@ -282,16 +282,16 @@ $$
 体电荷：
 
 $$
-dq=\rho(\mathbf r')dV',
+dq=\rho(\vec r')dV',
 $$
 
 $$
 \boxed{
-\mathbf E(\mathbf r)
+\vec E(\vec r)
 =\frac{1}{4\pi\varepsilon_0}
 \iiint_V
-\frac{\rho(\mathbf r')\left(\mathbf r-\mathbf r'\right)}
-{|\mathbf r-\mathbf r'|^3}
+\frac{\rho(\vec r')\left(\vec r-\vec r'\right)}
+{|\vec r-\vec r'|^3}
 dV'
 }.
 $$
@@ -299,16 +299,16 @@ $$
 面电荷：
 
 $$
-dq=\rho_s(\mathbf r')dS',
+dq=\rho_s(\vec r')dS',
 $$
 
 $$
 \boxed{
-\mathbf E(\mathbf r)
+\vec E(\vec r)
 =\frac{1}{4\pi\varepsilon_0}
 \iint_S
-\frac{\rho_s(\mathbf r')\left(\mathbf r-\mathbf r'\right)}
-{|\mathbf r-\mathbf r'|^3}
+\frac{\rho_s(\vec r')\left(\vec r-\vec r'\right)}
+{|\vec r-\vec r'|^3}
 dS'
 }.
 $$
@@ -316,16 +316,16 @@ $$
 线电荷：
 
 $$
-dq=\rho_l(\mathbf r')dl',
+dq=\rho_l(\vec r')dl',
 $$
 
 $$
 \boxed{
-\mathbf E(\mathbf r)
+\vec E(\vec r)
 =\frac{1}{4\pi\varepsilon_0}
 \int_L
-\frac{\rho_l(\mathbf r')\left(\mathbf r-\mathbf r'\right)}
-{|\mathbf r-\mathbf r'|^3}
+\frac{\rho_l(\vec r')\left(\vec r-\vec r'\right)}
+{|\vec r-\vec r'|^3}
 dl'
 }.
 $$
@@ -336,7 +336,7 @@ $$
 \boxed{
 \text{切成 }dq
 \longrightarrow
-\text{套点电荷的 }d\mathbf E
+\text{套点电荷的 }d\vec E
 \longrightarrow
 \text{按源分布积分}
 }.
@@ -350,26 +350,26 @@ $$
 
 ![均匀带电有限直线段的角度定义](images/finite-line-charge-geometry.png)
 
-*图 6　有限直线段两端在场点 $M$ 张开的角分别为 $\theta_1$、$\theta_2$；$\rho$ 是 $M$ 到直线的垂直距离。红色 $P'$、$z'$、$\mathbf R$ 标记是在 PPT 原图上增加的学习标注。图源：课堂 PPT 第 15 页。*
+*图 6　有限直线段两端在场点 $M$ 张开的角分别为 $\theta_1$、$\theta_2$；$\rho$ 是 $M$ 到直线的垂直距离。红色 $P'$、$z'$、$\vec R$ 标记是在 PPT 原图上增加的学习标注。图源：课堂 PPT 第 15 页。*
 
 取直线上的源点 $P'$：
 
 $$
-\mathbf r'=z'\mathbf e_z,
+\vec r'=z'\vec e_z,
 \qquad z'\in[z_1,z_2].
 $$
 
 这里 $z'$ 是源点坐标，也是积分变量。场点位置为
 
 $$
-\mathbf r=\rho\mathbf e_\rho+z\mathbf e_z.
+\vec r=\rho\vec e_\rho+z\vec e_z.
 $$
 
 所以从源点 $P'$ 指向场点 $M$ 的距离矢量为
 
 $$
-\mathbf R=\mathbf r-\mathbf r'
-=\rho\mathbf e_\rho+(z-z')\mathbf e_z.
+\vec R=\vec r-\vec r'
+=\rho\vec e_\rho+(z-z')\vec e_z.
 $$
 
 $\rho$ 和 $z-z'$ 是直角三角形的两条直角边，因此
@@ -380,7 +380,7 @@ $$
 
 ### 7.2 $\theta$、$\theta_1$、$\theta_2$ 的定义
 
-定义 $\theta$ 为从 $+z$ 方向转到 $\mathbf R$ 方向的夹角，取值范围 $0\le\theta\le\pi$。于是
+定义 $\theta$ 为从 $+z$ 方向转到 $\vec R$ 方向的夹角，取值范围 $0\le\theta\le\pi$。于是
 
 $$
 \sin\theta=\frac{\rho}{R},
@@ -421,9 +421,9 @@ $$
 代入母式：
 
 $$
-d\mathbf E
+d\vec E
 =\frac{\rho_l}{4\pi\varepsilon_0}
-\frac{\rho\mathbf e_\rho+(z-z')\mathbf e_z}
+\frac{\rho\vec e_\rho+(z-z')\vec e_z}
 {\left[\rho^2+(z-z')^2\right]^{3/2}}
 dz'.
 $$
@@ -479,7 +479,7 @@ $$
 又因为
 
 $$
-\mathbf e_R=\sin\theta\,\mathbf e_\rho+\cos\theta\,\mathbf e_z,
+\vec e_R=\sin\theta\,\vec e_\rho+\cos\theta\,\vec e_z,
 $$
 
 所以
@@ -534,7 +534,7 @@ $$
 
 $$
 \boxed{
-\mathbf E=E_\rho\mathbf e_\rho+E_z\mathbf e_z
+\vec E=E_\rho\vec e_\rho+E_z\vec e_z
 }.
 $$
 
@@ -575,15 +575,15 @@ $$
 
 $$
 \boxed{
-\mathbf E
-=\frac{\rho_l}{2\pi\varepsilon_0\rho}\mathbf e_\rho
+\vec E
+=\frac{\rho_l}{2\pi\varepsilon_0\rho}\vec e_\rho
 }.
 $$
 
 ### 物理解释
 
 - 对任一源元，总能在场点另一侧找到关于垂足对称的源元；二者的 $z$ 分量大小相等、方向相反，所以 $E_z=0$。
-- 所有径向分量同向叠加，所以电场只能垂直于直线，沿 $\mathbf e_\rho$。
+- 所有径向分量同向叠加，所以电场只能垂直于直线，沿 $\vec e_\rho$。
 - 正线电荷向外，负线电荷向内；公式中 $\rho_l$ 的正负自动决定方向。
 
 ### 考试重点：衰减规律
@@ -611,7 +611,7 @@ $$
 所以轴线上必有
 
 $$
-\boxed{\mathbf E=E_z\mathbf e_z}.
+\boxed{\vec E=E_z\vec e_z}.
 $$
 
 ### 9.2 写出源元和距离矢量
@@ -627,20 +627,20 @@ $$
 源点位置可写成
 
 $$
-\mathbf r'=a\mathbf e_\rho',
+\vec r'=a\vec e_\rho',
 $$
 
 场点位置为
 
 $$
-\mathbf r=z\mathbf e_z.
+\vec r=z\vec e_z.
 $$
 
 因此
 
 $$
-\mathbf R=\mathbf r-\mathbf r'
-=z\mathbf e_z-a\mathbf e_\rho',
+\vec R=\vec r-\vec r'
+=z\vec e_z-a\vec e_\rho',
 $$
 
 且对圆环上所有源点都有
@@ -654,16 +654,16 @@ $$
 微元电场为
 
 $$
-d\mathbf E
+d\vec E
 =\frac{1}{4\pi\varepsilon_0}
-\frac{z\mathbf e_z-a\mathbf e_\rho'}{(a^2+z^2)^{3/2}}
+\frac{z\vec e_z-a\vec e_\rho'}{(a^2+z^2)^{3/2}}
 \rho_l a\,d\varphi'.
 $$
 
 横向部分的积分为
 
 $$
-\int_0^{2\pi}\mathbf e_\rho'\,d\varphi'=0,
+\int_0^{2\pi}\vec e_\rho'\,d\varphi'=0,
 $$
 
 这就是“横向分量抵消”的数学表达。轴向微元为
@@ -691,9 +691,9 @@ $$
 
 $$
 \boxed{
-\mathbf E
+\vec E
 =\frac{\rho_l a z}{2\varepsilon_0(a^2+z^2)^{3/2}}
-\mathbf e_z
+\vec e_z
 }.
 $$
 
@@ -707,42 +707,42 @@ $$
 
 $$
 \boxed{
-\mathbf E
+\vec E
 =\frac{1}{4\pi\varepsilon_0}
 \frac{Qz}{(a^2+z^2)^{3/2}}
-\mathbf e_z
+\vec e_z
 }.
 $$
 
 ### 9.4 结果自检
 
-- $z=0$：圆心处各方向完全对称，公式给出 $\mathbf E=0$。
+- $z=0$：圆心处各方向完全对称，公式给出 $\vec E=0$。
 - $z\gg a$：$a^2+z^2\approx z^2$，因此
 
   $$
-  \mathbf E\approx
-  \frac{1}{4\pi\varepsilon_0}\frac{Q}{z^2}\mathbf e_z,
+  \vec E\approx
+  \frac{1}{4\pi\varepsilon_0}\frac{Q}{z^2}\vec e_z,
   $$
 
   远处看起来像一个总电荷为 $Q$ 的点电荷。
-- $z<0$ 且 $Q>0$：公式中的 $z$ 为负，电场沿 $-\mathbf e_z$，仍然是从正电荷向外。
+- $z<0$ 且 $Q>0$：公式中的 $z$ 为负，电场沿 $-\vec e_z$，仍然是从正电荷向外。
 
 ## 10. 做题模板
 
 ### 连续电荷直接积分的六步法
 
-1. **画源和场点：**标出 $\mathbf r'$、$\mathbf r$。
-2. **写距离矢量：**$\mathbf R=\mathbf r-\mathbf r'$，再求 $R=|\mathbf R|$。
+1. **画源和场点：**标出 $\vec r'$、$\vec r$。
+2. **写距离矢量：**$\vec R=\vec r-\vec r'$，再求 $R=|\vec R|$。
 3. **写微元电荷：**根据分布选 $dq=\rho dV'$、$\rho_s dS'$ 或 $\rho_l dl'$。
-4. **套母式：**$d\mathbf E=(4\pi\varepsilon_0)^{-1}(\mathbf R/R^3)dq$。
+4. **套母式：**$d\vec E=(4\pi\varepsilon_0)^{-1}(\vec R/R^3)dq$。
 5. **先看对称性：**能抵消的分量先去掉，再选择合适积分变量。
 6. **检查单位、方向、极限：**结果单位应为 $\mathrm{N/C}$ 或 $\mathrm{V/m}$，并满足明显的对称性与远场规律。
 
 ## 11. 高频易错点
 
-1. 把 $\mathbf R$ 写反。正确的是场点减源点：$\mathbf R=\mathbf r-\mathbf r'$。
+1. 把 $\vec R$ 写反。正确的是场点减源点：$\vec R=\vec r-\vec r'$。
 2. 忘记 $R$ 在积分中通常随源点变化，不能随意提出积分号。
-3. 把 $\mathbf R/R^3$ 错看成 $1/R^3$ 衰减；它的大小是 $R/R^3=1/R^2$。
+3. 把 $\vec R/R^3$ 错看成 $1/R^3$ 衰减；它的大小是 $R/R^3=1/R^2$。
 4. 多个电场只加大小，不加矢量分量。
 5. 混淆 $\rho$ 的两种含义：体电荷密度与柱坐标径向距离。
 6. 把 $\mathrm{C/m^3}$ 写成电流密度单位；电流密度是 $\mathrm{A/m^2}$。
@@ -756,8 +756,8 @@ $$
 - [ ] 我能解释“电荷是源量，电场强度是场量”。
 - [ ] 我能写出点电荷的 $\delta$ 函数表示，并解释积分挑选性质。
 - [ ] 我能不看笔记写出库仑定律的矢量形式。
-- [ ] 我能解释 $\mathbf r'$、$\mathbf r$、$\mathbf R$、$R$ 各自代表什么。
-- [ ] 我能从 $d\mathbf E$ 母式现场写出体、面、线电荷的积分式，而不是死背。
+- [ ] 我能解释 $\vec r'$、$\vec r$、$\vec R$、$R$ 各自代表什么。
+- [ ] 我能从 $d\vec E$ 母式现场写出体、面、线电荷的积分式，而不是死背。
 - [ ] 我能完整推导有限直线段的 $E_\rho$、$E_z$，并说明角度换元的每一步。
 - [ ] 我能从有限直线段取极限得到无限长线电荷的电场。
 - [ ] 我能先用对称性，再推导圆环轴线上的电场。
@@ -768,3 +768,10 @@ $$
 - 教材：何姿、丁大志、李猛猛、包华广、樊振宏编著《电磁场与电磁波》，本次使用第 2 章中电荷及电荷密度、电场强度、库仑定律及叠加原理相关内容。
 - 课堂 PPT：使用“源量与场量”、四种电荷模型、库仑定律、电场强度、连续电荷积分，以及有限直线段和圆环几何图相关页面。
 - 仓库只保存为理解知识所需的局部示意图裁剪，不保存教材 PDF 或整页课件截图。
+
+## 14. 继续学习 2.1.3–2.1.7
+
+- [概念与课堂笔记：高斯定律、电偶极子、极化、电容与电场能量](electrostatics-concepts-2.1.3-2.1.7.md)
+- [典型例题与解题方法：平行双线和均匀带电球体](electrostatics-examples-2.1.3-2.1.7.md)
+
+续篇沿用本页的源量—场量主线，并统一使用带箭头的物理矢量记号。
