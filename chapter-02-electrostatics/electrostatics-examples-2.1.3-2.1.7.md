@@ -1,4 +1,4 @@
-# 第二章题型库：静电场、电容与能量
+# 第二章题型库：静电场完整题型与解题方法
 
 本页按“识别信号 → 建模 → 计算 → 自检”整理本阶段典型题。公式的适用条件与物理解释见[概念与课堂笔记](electrostatics-concepts-2.1.3-2.1.7.md)。
 
@@ -71,7 +71,7 @@ $$
 
 ![均匀带电球体的分区与场强变化](images/charged-sphere-regions-and-field.png)
 
-> 图 2-5　$a$ 是真实带电球的固定半径， $r$ 是高斯面的半径，也是场点到球心的距离。来源：《第二章 静电场》PPT，第 20 页局部裁图。
+> 图 2-5　 $a$ 是真实带电球的固定半径， $r$ 是高斯面的半径，也是场点到球心的距离。来源：《第二章 静电场》PPT，第 20 页局部裁图。
 
 ### 三个自检
 
@@ -469,6 +469,10 @@ W_e
 }.
 $$
 
+![例 2.1.8 的场能量法原页](images/charged-sphere-energy-field-method.png)
+
+> 图 2-6　球内、球外分别积分后相加。来源：《第二章 静电场》PPT 第 50 页。
+
 而且
 
 $$
@@ -516,6 +520,10 @@ W_e
 =\boxed{\frac{4\pi\rho^2a^5}{15\varepsilon_0}}.
 $$
 
+![例 2.1.8 的电荷—电位法原页](images/charged-sphere-energy-potential-method.png)
+
+> 图 2-7　先求球内电位，再只在有电荷的球内积分。来源：《第二章 静电场》PPT 第 51 页。
+
 ### 用总电荷改写并做量纲检查
 
 总电荷
@@ -550,6 +558,335 @@ $$
 
 ---
 
+## 题型 9：教材例 2.3.1——球坐标散度的具体计算
+
+### 题目
+
+真空中半径为 $a$ 的球内分布着体电荷。已知球内电场
+
+$$
+\vec E=\vec e_r(r^3+Ar^2),
+\qquad 0\le r\le a,
+$$
+
+其中 $A$ 为常数。求球内 $\rho(r)$ 和球外电场。
+
+### 第一步：判断球坐标公式能简化到哪一步
+
+一般球坐标散度为
+
+$$
+\nabla\cdot\vec D
+=\frac1{r^2}\frac{\partial(r^2D_r)}{\partial r}
++\frac1{r\sin\theta}
+\frac{\partial(D_\theta\sin\theta)}{\partial\theta}
++\frac1{r\sin\theta}
+\frac{\partial D_\phi}{\partial\phi}.
+$$
+
+本题只有径向分量， $D_\theta=D_\phi=0$ ，且 $D_r$ 与 $\theta$ 、 $\phi$ 无关，所以后两项为零：
+
+$$
+\boxed{
+\nabla\cdot\vec D
+=\frac1{r^2}\frac{d(r^2D_r)}{dr}
+}.
+$$
+
+真空中 $\vec D=\varepsilon_0\vec E$ ，因此
+
+$$
+D_r=\varepsilon_0(r^3+Ar^2).
+$$
+
+### 第二步：由 $\nabla\cdot\vec D=\rho$ 求体电荷密度
+
+$$
+\begin{aligned}
+\rho(r)
+&=\frac1{r^2}\frac{d}{dr}
+\left[\varepsilon_0r^2(r^3+Ar^2)\right]\\
+&=\frac{\varepsilon_0}{r^2}
+\frac{d}{dr}(r^5+Ar^4)\\
+&=\boxed{\varepsilon_0(5r^2+4Ar)}.
+\end{aligned}
+$$
+
+> **课堂疑点对应：**球坐标散度不是简单的 $dD_r/dr$ ； $r^2D_r$ 里的 $r^2$ 来自球面面积随半径变化。
+
+### 第三步：求球内总电荷
+
+球对称体积元为 $dV=4\pi r^2dr$ ，所以
+
+$$
+\begin{aligned}
+q
+&=\int_0^a\rho(r)4\pi r^2dr\\
+&=4\pi\varepsilon_0
+\int_0^a(5r^4+4Ar^3)dr\\
+&=\boxed{4\pi\varepsilon_0(a^5+Aa^4)}.
+\end{aligned}
+$$
+
+### 第四步：由高斯定理求球外场
+
+球外没有新的电荷，半径 $r\ge a$ 的球形高斯面包围的电荷恒为上式的 $q$ ：
+
+$$
+\varepsilon_0E_{\mathrm{out}}4\pi r^2=q.
+$$
+
+因此
+
+$$
+\boxed{
+\vec E_{\mathrm{out}}
+=\vec e_r\frac{a^5+Aa^4}{r^2},
+\qquad r\ge a
+}.
+$$
+
+在 $r=a$ 处，球内式与球外式都给出 $\vec e_r(a^3+Aa^2)$ ，场连续。
+
+![教材例 2.3.1 原页局部](images/spherical-divergence-example.png)
+
+> 图 2-8　教材例 2.3.1 的题目、散度代入、总电荷和球外场。来源：教材 PDF 页序 62，印刷页 52 局部裁图。
+
+### 本题最容易错的四点
+
+1. 把球坐标散度错写成 $dD_r/dr$ 。
+2. 漏掉真空本构关系 $\vec D=\varepsilon_0\vec E$ 。
+3. 积分总电荷时漏掉球壳体积元 $4\pi r^2dr$ 。
+4. 球外仍把 $Q_{\mathrm{enc}}$ 写成随 $r$ 增长；真实带电区只到 $a$ ，球外包围电荷已经固定。
+
+---
+
+## 题型 10：PPT 例 2.3.3——两接地平板与中间面电荷
+
+> 教材中的同类题编为例 2.3.5；课堂 PPT 编为例 2.3.3。本文按课堂编号称呼。
+
+### 题目与分区
+
+两块无限大接地导体平板位于
+
+$$
+x=0,
+\qquad
+x=a.
+$$
+
+在 $x=b$ 处有自由面电荷密度 $\rho_{s0}$ 。两板接地给出
+
+$$
+\varphi(0)=0,
+\qquad
+\varphi(a)=0.
+$$
+
+无限大平面结构沿 $y$ 、 $z$ 方向没有变化，因此 $\varphi=\varphi(x)$ 。面电荷只位于 $x=b$ 这一张面上；区域 $0<x<b$ 和 $b<x<a$ 内都没有体电荷，所以分别满足一维拉普拉斯方程：
+
+$$
+\frac{d^2\varphi_1}{dx^2}=0,
+\qquad 0<x<b,
+$$
+
+$$
+\frac{d^2\varphi_2}{dx^2}=0,
+\qquad b<x<a.
+$$
+
+![两接地平板题的分区](images/grounded-parallel-plates-problem.png)
+
+> 图 2-9　两接地平板、面电荷位置与分区。来源：《第二章 静电场》PPT 第 70 页。
+
+### 第一步：写两个区域的通解
+
+$$
+\varphi_1(x)=C_1x+D_1,
+$$
+
+$$
+\varphi_2(x)=C_2x+D_2.
+$$
+
+共有四个未知常数，因此需要四个独立边界条件。
+
+### 第二步：写出四个边界条件
+
+左板接地：
+
+$$
+\varphi_1(0)=0.
+$$
+
+右板接地：
+
+$$
+\varphi_2(a)=0.
+$$
+
+在 $x=b$ 处电位连续：
+
+$$
+\varphi_1(b)=\varphi_2(b).
+$$
+
+在 $x=b$ 处，取法向为 $+\vec e_x$ 。由
+
+$$
+D_{2x}-D_{1x}=\rho_{s0},
+\qquad
+D_x=\varepsilon_0E_x
+=-\varepsilon_0\frac{d\varphi}{dx},
+$$
+
+得到导数跳变条件
+
+$$
+\boxed{
+\left[
+\frac{d\varphi_2}{dx}
+-\frac{d\varphi_1}{dx}
+\right]_{x=b}
+=-\frac{\rho_{s0}}{\varepsilon_0}
+}.
+$$
+
+> **为什么电位连续、导数却跳变：** $\varphi$ 跨越零厚度界面的变化趋于零，所以函数值连续；面电荷使法向电场跳变，而 $E_x=-d\varphi/dx$ ，因此斜率可以突变。
+
+### 第三步：把条件代入四个常数
+
+由四个条件得到
+
+$$
+D_1=0,
+$$
+
+$$
+C_2a+D_2=0,
+$$
+
+$$
+C_1b+D_1=C_2b+D_2,
+$$
+
+$$
+C_2-C_1=-\frac{\rho_{s0}}{\varepsilon_0}.
+$$
+
+解得
+
+$$
+C_1=\frac{\rho_{s0}(a-b)}{\varepsilon_0a},
+\qquad
+D_1=0,
+$$
+
+$$
+C_2=-\frac{\rho_{s0}b}{\varepsilon_0a},
+\qquad
+D_2=\frac{\rho_{s0}b}{\varepsilon_0}.
+$$
+
+### 第四步：写出电位
+
+区域 1：
+
+$$
+\boxed{
+\varphi_1(x)
+=\frac{\rho_{s0}(a-b)}{\varepsilon_0a}x,
+\qquad 0\le x\le b
+}.
+$$
+
+区域 2：
+
+$$
+\boxed{
+\varphi_2(x)
+=\frac{\rho_{s0}b}{\varepsilon_0a}(a-x),
+\qquad b\le x\le a
+}.
+$$
+
+在 $x=b$ 处，两式都给出
+
+$$
+\varphi(b)
+=\frac{\rho_{s0}b(a-b)}{\varepsilon_0a},
+$$
+
+因此电位连续。
+
+### 第五步：由 $\vec E=-\nabla\varphi$ 求电场
+
+这里只随 $x$ 变化，所以
+
+$$
+\vec E=-\vec e_x\frac{d\varphi}{dx}.
+$$
+
+区域 1：
+
+$$
+\boxed{
+\vec E_1
+=-\vec e_x
+\frac{\rho_{s0}(a-b)}{\varepsilon_0a}
+}.
+$$
+
+区域 2：
+
+$$
+\boxed{
+\vec E_2
+=+\vec e_x
+\frac{\rho_{s0}b}{\varepsilon_0a}
+}.
+$$
+
+若 $\rho_{s0}>0$ ，左侧电场向 $-\vec e_x$ ，右侧电场向 $+\vec e_x$ ，正好从正面电荷向两侧发散。
+
+![两接地平板题的边界条件和结果](images/grounded-parallel-plates-solution.png)
+
+> 图 2-10　四个边界条件、积分常数、电位和电场结果。来源：《第二章 静电场》PPT 第 71 页。
+
+### 三个自检
+
+1. $\varphi_1(0)=0$ 、 $\varphi_2(a)=0$ ，满足两板接地。
+2. $\varphi_1(b)=\varphi_2(b)$ ，电位连续。
+3. 电场跳变满足 $\varepsilon_0(E_{2x}-E_{1x})=\rho_{s0}$ 。
+
+若 $b=a/2$ ，面电荷位于正中间，则
+
+$$
+|E_1|=|E_2|=\frac{\rho_{s0}}{2\varepsilon_0},
+$$
+
+与孤立无限大均匀面电荷两侧场强一致。
+
+### 这类边值题的标准套路
+
+$$
+\boxed{
+\text{按源分区}
+\longrightarrow
+\text{各区写泊松/拉普拉斯方程}
+\longrightarrow
+\text{写通解}
+\longrightarrow
+\text{列足够的边界条件}
+\longrightarrow
+\text{解常数}
+\longrightarrow
+\vec E=-\nabla\varphi
+}.
+$$
+
+---
+
 ## 综合题决策流程
 
 ```text
@@ -558,18 +895,23 @@ $$
 │  ├─ 有高对称性：优先高斯定理
 │  └─ 无高对称性：库仑积分或先求电位
 ├─ 给电位或导体边界
-│  └─ 先求 φ，再用 E = -∇φ
-├─ 给极化强度 P
-│  ├─ 体内：ρp = -∇·P
-│  └─ 表面：ρsp = P·n
+│  ├─ 有体电荷：解泊松方程
+│  ├─ 无体电荷：解拉普拉斯方程
+│  └─ 用电位连续、法向导数跳变和导体电位确定常数
+├─ 给极化强度
+│  ├─ 体内：求极化强度的负散度
+│  └─ 表面：求极化强度的外法向分量
+├─ 给介质界面
+│  ├─ 检查电位移矢量法向分量
+│  └─ 检查电场强度切向分量
 ├─ 求电容
-│  └─ 建立 q → E → U → C 或 U → φ → E → q → C
+│  └─ 从电荷求电压，或从电位反求电荷
 └─ 求能量
    ├─ 已知 q、U、C：用电容器公式
    ├─ 已知 ρ、φ：在有电荷区积分
-   └─ 已知 E、D：在整个有场空间积分
+   └─ 已知场分布：在整个有场空间积分
 ```
 
 ## 资料说明
 
-本题型库依据教材《电磁场与电磁波》第二章 2.1 的相关内容、课件《第二章 静电场》PPT 第 17–56 页和学习对话中对例 2.1.8 的追问整理。例题条件不完整处未自行补题；所有课件图片均注明来源页码。
+本题型库依据教材《电磁场与电磁波》第二章（印刷页 29–59，对应本地 PDF 页序 39–69）、课件《第二章 静电场》PPT 第 17–71 页，以及学习对话中对例 2.1.8、教材例 2.3.1 和 PPT 例 2.3.3 的追问整理。例题条件不完整处未自行补题；所有教材和课件图片均注明来源页码。
